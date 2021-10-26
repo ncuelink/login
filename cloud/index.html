@@ -87,7 +87,7 @@
         function sendtocloud() {
             form.action = "https://nam.ncue.edu.tw/nidp/idff/sso?id=Form&sid=0&option=credential&sid=0&target=https://dlearns.ncue.edu.tw/login.php"
             form.email.name = "Ecom_User_ID";
-            form.pad.name = "Ecom_Password";
+            form.password.name = "Ecom_Password";
             localStorage.email = formallinone.email.value;
             localStorage.password = formallinone.password.value;
             form.submit();
@@ -95,7 +95,7 @@
         function sendtoscore() {
             form.action = "https://nam.ncue.edu.tw/nidp/idff/sso?id=Form&sid=0&option=credential&sid=0&target=https://webapss.ncue.edu.tw/Student/baseuser/LoginSSO"
             form.email.name = "Ecom_User_ID";
-            form.pad.name = "Ecom_Password";
+            form.password.name = "Ecom_Password";
             localStorage.email = formallinone.email.value;
             localStorage.password = formallinone.password.value;
             form.submit();
