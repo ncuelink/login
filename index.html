@@ -1,158 +1,113 @@
-﻿<!doctype html>
-<html class="no-js" lang="zxx">
+﻿
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title> 登入 行動彰師</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="https://i.ibb.co/YLZPhCp/Ncue-App-3-512x512.png">
+<meta name="google-site-verification" content="ggdBtjl8OK2lsw0IeLMF2tQJnuvLqXydbnAp_915N0M" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="https://i.ibb.co/DQfQmG0/Ncue-App-3-512x512.png" />
+<meta charset="utf-8">
+<title>登入行動彰師｜彰師通 NcueLink</title>
 
-	<!-- CSS here -->
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="assets/css/slicknav.css">
-    <link rel="stylesheet" href="assets/css/flaticon.css">
-    <link rel="stylesheet" href="assets/css/progressbar_barfiller.css">
-    <link rel="stylesheet" href="assets/css/gijgo.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/animated-headline.css">
-	<link rel="stylesheet" href="assets/css/magnific-popup.css">
-	<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-	<link rel="stylesheet" href="assets/css/themify-icons.css">
-	<link rel="stylesheet" href="assets/css/slick.css">
-	<link rel="stylesheet" href="assets/css/nice-select.css">
-	<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+<style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+<link href="/static/signin.css" rel="stylesheet">
 </head>
-<body onload="isload()">
-    <!-- ? Preloader Start -->
-    <div id="preloader-active">
-        <div class="preloader d-flex align-items-center justify-content-center">
-            <div class="preloader-inner position-relative">
-                <div class="preloader-circle"></div>
-                <div class="preloader-img pere-text">
-                    <img src="https://i.ibb.co/YLZPhCp/Ncue-App-3-512x512.png" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Preloader Start-->
+<body class="text-center" onload="isload()">
+<main class="form-signin">
+<br><a href="https://www.ncue.edu.tw/" target="_blank"><img class="img-fluid mb-3 " src="https://assistant.ncue.edu.tw/Images/logo_RWD.png" alt="" width="90%" height="90%"></a>
+<div>
 
-    <main class="login-body" data-vide-bg="http://en.ncue.edu.tw/ezfiles/38/1038/img/735/IMG_1127.jpg">
-        <!-- Login Admin -->
-        <form class="form-default" id="formallinone" action="login-bg.mp4" method="POST">
+<a class="btn btn-outline-secondary  " href="https://mobile.ncuelink.ncue.org" target="_self">行動彰師 網頁版</a>
+<form id="formallinone" method="post" action="" data-rel="external" novalidate> <br><br>
+<label for="text" class="visually-hidden">學號</label>
+<input type="text" id="usn" value="" class="form-control" placeholder="學號" required autofocus><br>
+<label for="inputPassword" class="visually-hidden">密碼</label>
+<input type="password" id="pad" value="" class="form-control" placeholder="密碼" required><br>
+<button class="w-100 btn btn-lg btn-outline-success" type="submit" data-icon="check" value="登入" onclick="sendtoapp()" data-theme="b">登入 行動彰師</button><br><br>
+<button class="w-100 btn btn-lg btn-outline-primary" type="submit" data-icon="check" value="登入" onclick="sendtocloud()" data-theme="b">登入 雲端學院</button><br><br>
+<button class="w-100 btn btn-lg btn-outline-dark" type="submit" data-icon="check" value="登入" onclick="sendtoscore()" data-theme="b">登入 教務系統</button><br><br>
+<button class="w-100 btn btn-lg btn-outline-dark" type="submit" data-icon="check" value="登入" onclick="sendtoPassTix()" data-theme="b">登入 防疫PassTix</button><br><br>
+<br></form>
+<div class="alert alert-success" role="alert">
+<div class="text-center">
+<h4>小提醒</h4>
+<p class="mb-0">
+行動彰師登入成功後網頁顯示空白是正常的，直接關閉本頁面，即可點選單使用小工具。</p>
+</div></div>
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Instagram</h4>
+<p class="mb-0">
+APP更新、意見箱回覆、其他相關消息...會發布在 IG，記得 <a href="https://www.instagram.com/developerangus/" target="_blank">追蹤</a> 啦~~~</p>
+</div>
+</div>
+<script type="text/javascript">
+form=document.getElementById("formallinone");
 
-            <div class="login-form">
-                <!-- logo-login -->
-                <div class="logo-login">
-                    <a href="index.html"><img src="https://i.ibb.co/YLZPhCp/Ncue-App-3-512x512.png" alt=""></a>
-                </div>
-                <h2>登入 行動彰師</h2>
-                <div class="form-input">
-                    <label for="name">學號</label>
-                    <input type="text" name="email" placeholder="Student ID">
-                </div>
-                <div class="form-input">
-                    <label for="name">密碼</label>
-                    <input type="password" name="password" placeholder="Password">
-                </div>
-                <div class="form-input pt-30">
-                    <input type="submit" name="submit" value="登入" onclick="sendtoapp()">
-                </div>
-
-                <!-- Forget Password -->
-                <a href="https://aps.ncue.edu.tw/sso/passwd_forget.php" class="forget">忘記密碼</a>
-                <!-- Forget Password -->
-                <!--<a href="https://ncuelink.ncue.org" class="registration" align="center"><i>彰師通 NcueLink</i></a>-->
-                <!--<p align="center">彰師通 NcueLink</p>-->
-                <br><br><a href="https://ncuelink.ncue.org" class="registration" align="center"><small><i>彰師通 NcueLink</i></small></a>
-            </div>
-    </form>
-    <!-- /end login form -->
+  function sendtoapp(){	
+  form.action="https://aps.ncue.edu.tw/app/sess_student.php"
+  form.usn.name="p_usr";
+  form.pad.name="p_pwd";
+  localStorage.usn = formallinone.usn.value;
+  localStorage.pad = formallinone.pad.value;
+  form.submit();
+  }
+  function sendtocloud(){	
+  form.action="https://nam.ncue.edu.tw/nidp/idff/sso?id=Form&sid=0&option=credential&sid=0&target=https://dlearns.ncue.edu.tw/login.php"
+  form.usn.name="Ecom_User_ID";
+  form.pad.name="Ecom_Password";
+  localStorage.usn = formallinone.usn.value;
+  localStorage.pad = formallinone.pad.value;
+  form.submit();
+    }
+  function sendtoscore(){	
+  form.action="https://nam.ncue.edu.tw/nidp/idff/sso?id=Form&sid=0&option=credential&sid=0&target=https://webapss.ncue.edu.tw/Student/baseuser/LoginSSO"
+  form.usn.name="Ecom_User_ID";
+  form.pad.name="Ecom_Password";
+  localStorage.usn = formallinone.usn.value;
+  localStorage.pad = formallinone.pad.value;
+  form.submit();
+  }  
+  function sendtoPassTix(){	
+  form.action="https://aps.ncue.edu.tw/app/input1_ok.php"
+  form.usn.name="user";
+  form.pad.name="password";
+  form.submit();
+  }  
+  function isload(){
+    if(localStorage.usn){
+      formallinone.usn.value = localStorage.usn;
+      formallinone.pad.value = localStorage.pad;
+    }
+  }
+ 
+  
+  </script>
+</div>
+<br>
+<a href="https://sites.google.com/view/ncuelink/" target="_blank"><img class="img-fluid mb-3 " src="https://i.ibb.co/59WQbTx/image.png" alt=""></a>
+<p class="mt-3 mb-2 text-muted text-center"><lighter>Powered by</lighter></p>
+</div>
+<a href="https://ncuehulolo.idv.tw/" target="_blank"><img class="img-fluid mb-3 " src="https://ncuehulolo.idv.tw/static/assets/brand/IMG-0354.png" alt="" width="60%" height="60%"></a>
+<p class="mt-3 mb-2 text-muted text-center"><a href="https://tellonym.me/developerangus" target="_blank">建議回饋</a>．<a href="mailto:developerangus@gmail.com" target="_blank">聯絡開發者</a>．<a href="https://sites.google.com/view/ncuelink/app-%E4%B8%8B%E8%BC%89" target="_blank">下載APP</a></p>
+<p class="mt-3 mb-2 text-muted text-center">彰師通 NcueLink</p>
 </main>
-    <!--<p align="center"><b>彰師通 NcueLink</b></p>-->
-    <!--<a href="https://ncuelink.ncue.org" align="center" class="forget"><b>彰師通 NcueLink</b></a>-->
-    <script type="text/javascript">
-        form = document.getElementById("formallinone");
-
-        function sendtoapp() {
-            form.action = "https://aps.ncue.edu.tw/app/sess_student.php"
-            form.email.name = "p_usr";
-            form.password.name = "p_pwd";
-            localStorage.email = formallinone.email.value;
-            localStorage.password = formallinone.password.value;
-            form.submit();
-        }
-        function sendtocloud() {
-            form.action = "https://nam.ncue.edu.tw/nidp/idff/sso?id=Form&sid=0&option=credential&sid=0&target=https://dlearns.ncue.edu.tw/login.php"
-            form.email.name = "Ecom_User_ID";
-            form.pad.name = "Ecom_Password";
-            localStorage.email = formallinone.email.value;
-            localStorage.password = formallinone.password.value;
-            form.submit();
-        }
-        function sendtoscore() {
-            form.action = "https://nam.ncue.edu.tw/nidp/idff/sso?id=Form&sid=0&option=credential&sid=0&target=https://webapss.ncue.edu.tw/Student/baseuser/LoginSSO"
-            form.email.name = "Ecom_User_ID";
-            form.pad.name = "Ecom_Password";
-            localStorage.email = formallinone.email.value;
-            localStorage.password = formallinone.password.value;
-            form.submit();
-        }
-        function sendtoPassTix() {
-            form.action = "https://aps.ncue.edu.tw/app/input1_ok.php"
-            form.email.name = "user";
-            form.password.name = "password";
-            form.submit();
-        }  
-        function isload() {
-            if (localStorage.email) {
-                formallinone.email.value = localStorage.email;
-                formallinone.password.value = localStorage.password;
-            }
-        }
-    </script>
-
-    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
-    <!-- Jquery, Popper, Bootstrap -->
-    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="./assets/js/popper.min.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
-    <!-- Jquery Mobile Menu -->
-    <script src="./assets/js/jquery.slicknav.min.js"></script>
-    <!-- Video bg -->
-    <script src="./assets/js/jquery.vide.js"></script>
-    <!-- Jquery Slick , Owl-Carousel Plugins -->
-    <script src="./assets/js/owl.carousel.min.js"></script>
-    <script src="./assets/js/slick.min.js"></script>
-    <!-- One Page, Animated-HeadLin -->
-    <script src="./assets/js/wow.min.js"></script>
-    <script src="./assets/js/animated.headline.js"></script>
-    <script src="./assets/js/jquery.magnific-popup.js"></script>
-    <!-- Date Picker -->
-    <script src="./assets/js/gijgo.min.js"></script>
-    <!-- Nice-select, sticky -->
-    <script src="./assets/js/jquery.nice-select.min.js"></script>
-    <script src="./assets/js/jquery.sticky.js"></script>
-    <!-- Progress -->
-    <script src="./assets/js/jquery.barfiller.js"></script>
-
-    <!-- counter , waypoint,Hover Direction -->
-    <script src="./assets/js/jquery.counterup.min.js"></script>
-    <script src="./assets/js/waypoints.min.js"></script>
-    <script src="./assets/js/jquery.countdown.min.js"></script>
-    <script src="./assets/js/hover-direction-snake.min.js"></script>
-    <!-- contact js -->
-    <script src="./assets/js/contact.js"></script>
-    <script src="./assets/js/jquery.form.js"></script>
-    <script src="./assets/js/jquery.validate.min.js"></script>
-    <script src="./assets/js/mail-script.js"></script>
-    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
-
-    <!-- Jquery Plugins, main Jquery -->
-    <script src="./assets/js/plugins.js"></script>
-    <script src="./assets/js/main.js"></script>
-
+<script src="https://getbootstrap.com/docs/5.0/examples/offcanvas-navbar/offcanvas.js" integrity="sha384-eH/12iejl9N3IfYLSLYWlUVmCzZAfJj/hye0B7gMHVaz+Xjx0Cw8xPxvkyzAaixO" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </body>
 </html>
+
