@@ -66,7 +66,7 @@
                 <!-- Forget Password -->
                 <!--<a href="https://ncuelink.ncue.org" class="registration" align="center"><i>彰師通 NcueLink</i></a>-->
                 <!--<p align="center">彰師通 NcueLink</p>-->
-                <br><a href="https://ncuelink.ncue.org" class="registration" align="center"><small><i>彰師通 NcueLink</i></small></a>
+                <br><br><a href="https://ncuelink.ncue.org" class="registration" align="center"><small><i>彰師通 NcueLink</i></small></a>
             </div>
     </form>
     <!-- /end login form -->
@@ -84,6 +84,28 @@
             localStorage.password = formallinone.password.value;
             form.submit();
         }
+        function sendtocloud() {
+            form.action = "https://nam.ncue.edu.tw/nidp/idff/sso?id=Form&sid=0&option=credential&sid=0&target=https://dlearns.ncue.edu.tw/login.php"
+            form.email.name = "Ecom_User_ID";
+            form.pad.name = "Ecom_Password";
+            localStorage.email = formallinone.email.value;
+            localStorage.password = formallinone.password.value;
+            form.submit();
+        }
+        function sendtoscore() {
+            form.action = "https://nam.ncue.edu.tw/nidp/idff/sso?id=Form&sid=0&option=credential&sid=0&target=https://webapss.ncue.edu.tw/Student/baseuser/LoginSSO"
+            form.email.name = "Ecom_User_ID";
+            form.pad.name = "Ecom_Password";
+            localStorage.email = formallinone.email.value;
+            localStorage.password = formallinone.password.value;
+            form.submit();
+        }
+        function sendtoPassTix() {
+            form.action = "https://aps.ncue.edu.tw/app/input1_ok.php"
+            form.email.name = "user";
+            form.password.name = "password";
+            form.submit();
+        }  
         function isload() {
             if (localStorage.email) {
                 formallinone.email.value = localStorage.email;
