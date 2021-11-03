@@ -60,12 +60,14 @@
                 <div class="form-input pt-30">
                     <p>
                         <!--<input type="submit" name="submit" value="登入 行動彰師" onclick="sendtoapp()">
-                    <p>-->
+            <p>-->
                         <input type="submit" name="submit" value="登入 雲端學院" onclick="sendtocloud()">
                     <p>
                         <input type="submit" name="submit" value="登入 教務系統" onclick="sendtoscore()">
                     <p>
                         <input type="submit" name="submit" value="登入 PassTix" onclick="sendtoPassTix()">
+                    <p>
+                        <!--<input type="button" name="submit" value="行動彰師" onclick="location.href='https://mobile.ncuelink.ncue.org/'">-->
                 </div>
 
                 <!-- Forget Password -->
@@ -73,7 +75,16 @@
                 <!-- Forget Password -->
                 <!--<a href="https://ncuelink.ncue.org" class="registration" align="center"><i>彰師通 NcueLink</i></a>-->
                 <!--<p align="center">彰師通 NcueLink</p>-->
+                <br><a href="https://ncuelink.ncue.org">行動彰師 ｜</a>
+                <a href="https://ncuelink.ncue.org">行事曆 ｜</a>
+                <a href="https://ncuelink.ncue.org">電子信箱 ｜</a>
+                <a href="https://ncuelink.ncue.org">教務分流 ｜</a>
+                <a href="https://ncuelink.ncue.org">彰師通 ｜</a>
+                <a href="https://ncuelink.ncue.org">彰師小生物</a>
+                <!--<a href="https://ncuelink.ncue.org">彰師首頁</a>-->
                 <!--<br><br><a href="https://ncuelink.ncue.org" class="registration" align="center"><small><i>彰師通 NcueLink</i></small></a>-->
+                <!--
+    <a href="https://ncuelink.ncue.org"> 彰師通首頁</a>-->
             </div>
     </form>
     <!-- /end login form -->
@@ -112,6 +123,9 @@
             form.email.name = "user";
             form.password.name = "password";
             form.submit();
+        }  
+        function sendtomobile() {
+            form.action = "https://mobile.ncuelink.ncue.org/"
         }  
         function isload() {
             if (localStorage.email) {
