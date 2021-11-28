@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>快速登入｜彰師通 NcueLink</title>
+    <title> 快速入口｜彰師通 NcueLink </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
@@ -58,15 +58,33 @@
                     <input type="password" name="password" placeholder="Password">
                 </div>
                 <div class="form-input pt-30">
-                    <input type="submit" name="submit" value="快速登入" onclick="sendtonew()">
+                    <p>
+                        <!--<input type="submit" name="submit" value="登入 行動彰師" onclick="sendtoapp()">
+            <p>-->
+                        <input type="submit" name="submit" value="登入 雲端學院" onclick="sendtocloud()">
+                    <p>
+                        <input type="submit" name="submit" value="登入 教務系統" onclick="sendtoscore()">
+                    <p>
+                        <input type="submit" name="submit" value="登入 PassTix" onclick="sendtoPassTix()">
+                    <p>
+                        <!--<input type="button" name="submit" value="行動彰師" onclick="location.href='https://mobile.ncuelink.ncue.org/'">-->
                 </div>
 
                 <!-- Forget Password -->
-                <a href="https://aps.ncue.edu.tw/sso/passwd_forget.php" class="forget">忘記密碼</a>
+                <!--<a href="https://aps.ncue.edu.tw/sso/passwd_forget.php" class="forget">忘記密碼</a>-->
                 <!-- Forget Password -->
                 <!--<a href="https://ncuelink.ncue.org" class="registration" align="center"><i>彰師通 NcueLink</i></a>-->
                 <!--<p align="center">彰師通 NcueLink</p>-->
-                <br><br><a href="https://ncuelink.ncue.org" class="registration" align="center"><small><i>彰師通 NcueLink</i></small></a>
+                <br><a href="https://mobile.ncuelink.ncue.org"> 行動彰師 ｜</a>
+                <a href="https://ncuelink.ncue.org/行事曆">行事曆 ｜</a>
+                <a href="https://mail.ncue.edu.tw/">電子信箱 ｜</a>
+                <a href="https://webap2.ncue.edu.tw/Student/">教務分流 ｜</a>
+                <a href="https://ncuelink.ncue.org">彰師通 ｜</a>
+                <a href="https://liff.line.me/1645278921-kWRPP32q?accountId=154pucve&openerPlatform=native&openerKey=talkroom%3Aheader#mst_challenge=Gb75sXBSwrqo7owGg7Yr70XAYevgBmkolRiMklv8aiI">彰師小生物</a>
+                <!--<a href="https://ncuelink.ncue.org">彰師首頁</a>-->
+                <!--<br><br><a href="https://ncuelink.ncue.org" class="registration" align="center"><small><i>彰師通 NcueLink</i></small></a>-->
+                <!--
+    <a href="https://ncuelink.ncue.org"> 彰師通首頁</a>-->
             </div>
     </form>
     <!-- /end login form -->
@@ -76,14 +94,6 @@
     <script type="text/javascript">
         form = document.getElementById("formallinone");
 
-        function sendtonew() {
-            form.action = "https://nam.ncue.edu.tw/nidp/idff/sso?id=Form&sid=0&option=credential&sid=0&target=https://portal.ncuelink.ncue.org/success"
-            form.email.name = "Ecom_User_ID";
-            form.password.name = "Ecom_Password";
-            localStorage.email = formallinone.email.value;
-            localStorage.password = formallinone.password.value;
-            form.submit();
-        }
         function sendtoapp() {
             form.action = "https://aps.ncue.edu.tw/app/sess_student.php"
             form.email.name = "p_usr";
@@ -113,6 +123,9 @@
             form.email.name = "user";
             form.password.name = "password";
             form.submit();
+        }  
+        function sendtomobile() {
+            form.action = "https://mobile.ncuelink.ncue.org/"
         }  
         function isload() {
             if (localStorage.email) {
