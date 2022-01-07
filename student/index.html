@@ -10,20 +10,20 @@
     <link rel="shortcut icon" type="image/x-icon" href="../assets/img/icon.png">
 
 	<!-- CSS here -->
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="assets/css/slicknav.css">
-    <link rel="stylesheet" href="assets/css/flaticon.css">
-    <link rel="stylesheet" href="assets/css/progressbar_barfiller.css">
-    <link rel="stylesheet" href="assets/css/gijgo.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/animated-headline.css">
-	<link rel="stylesheet" href="assets/css/magnific-popup.css">
-	<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-	<link rel="stylesheet" href="assets/css/themify-icons.css">
-	<link rel="stylesheet" href="assets/css/slick.css">
-	<link rel="stylesheet" href="assets/css/nice-select.css">
-	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../assets/css/slicknav.css">
+    <link rel="stylesheet" href="../assets/css/flaticon.css">
+    <link rel="stylesheet" href="../assets/css/progressbar_barfiller.css">
+    <link rel="stylesheet" href="../assets/css/gijgo.css">
+    <link rel="stylesheet" href="../assets/css/animate.min.css">
+    <link rel="stylesheet" href="../assets/css/animated-headline.css">
+	<link rel="stylesheet" href="../assets/css/magnific-popup.css">
+	<link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
+	<link rel="stylesheet" href="../assets/css/themify-icons.css">
+	<link rel="stylesheet" href="../assets/css/slick.css">
+	<link rel="stylesheet" href="../assets/css/nice-select.css">
+	<link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body onload="isload()">
     <!-- ? Preloader Start -->
@@ -58,16 +58,18 @@
                     <input type="password" name="password" placeholder="Password">
                 </div>
                 <div class="form-input pt-30">
-                    <input type="submit" name="submit" value="登入" onclick="sendtoscore()">
+                    <p>
+                        <input type="submit" name="submit" value="登入1" onclick="sendtoscore()">
+                    <p>
+                        <input type="submit" name="submit" value="登入2" onclick="sendtoscore2()">
                 </div>
 
                 <!-- Forget Password -->
-                <a href="https://aps.ncue.edu.tw/sso/passwd_forget.php" class="forget">忘記密碼</a>
+                <!--<a href="https://aps.ncue.edu.tw/sso/passwd_forget.php" class="forget">忘記密碼</a>-->
                 <!-- Forget Password -->
                 <!--<a href="https://ncuelink.ncue.org" class="registration" align="center"><i>彰師通 NcueLink</i></a>-->
                 <!--<p align="center">彰師通 NcueLink</p>-->
-                <br><br><a href="https://ncuelink.ncue.org" class="registration" align="center"><small><i>彰師通 NcueLink</i></small></a>
-            </div>
+                <br><a href="https://ncuelink.ncue.org" class="registration" align="center"><small><i>彰師通 NcueLink</i></small></a>
     </form>
     <!-- /end login form -->
 </main>
@@ -94,6 +96,14 @@
         }
         function sendtoscore() {
             form.action = "https://nam.ncue.edu.tw/nidp/idff/sso?id=Form&sid=0&option=credential&sid=0&target=https://webapss.ncue.edu.tw/Student/baseuser/LoginSSO"
+            form.email.name = "Ecom_User_ID";
+            form.password.name = "Ecom_Password";
+            localStorage.email = formallinone.email.value;
+            localStorage.password = formallinone.password.value;
+            form.submit();
+        }
+        function sendtoscore2() {
+            form.action = "https://nam.ncue.edu.tw/nidp/idff/sso?id=Form&sid=0&option=credential&sid=0&target=https://webap2s.ncue.edu.tw/Student/baseuser/LoginSSO"
             form.email.name = "Ecom_User_ID";
             form.password.name = "Ecom_Password";
             localStorage.email = formallinone.email.value;
