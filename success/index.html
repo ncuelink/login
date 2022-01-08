@@ -49,6 +49,8 @@
                     <a href="https://ncuelink.ncue.org"><img src="../assets/img/icon.png" alt=""></a>
                 </div>
                 <h2>快速入口</h2>
+                <input type="hidden" name="email" placeholder="Student ID">
+                <input type="hidden" name="password" placeholder="Password">
                 <!--<h2>快速登入<br><font size="5"><small><i>～行動彰師的替代方案～</i></small></font></h2>-->
                 <!--
                 <div class="form-input">
@@ -72,7 +74,7 @@
                     <p>
                         <input type="submit" name="submit" value="活動報名" onclick="activity()">
                     <p>
-                        <input type="submit" name="submit" value="會議場地借用" onclick="conference()">
+                        <input type="submit" name="submit" value="討論室借用" onclick="conference()">
                     <p>
                         
                         <!--<input type="button" name="submit" value="行動彰師" onclick="location.href='https://mobile.ncuelink.ncue.org/'">-->
@@ -114,21 +116,39 @@
         }
         function cloud() {
             form.action = "https://nam.ncue.edu.tw/nidp/idff/sso?id=Form&sid=0&option=credential&sid=0&target=https://dlearns.ncue.edu.tw/login.php"
+            form.email.name = "Ecom_User_ID";
+            form.password.name = "Ecom_Password";
+            form.submit();
         }
         function score() {
             form.action = "https://nam.ncue.edu.tw/nidp/idff/sso?id=Form&sid=0&option=credential&sid=0&target=https://webapss.ncue.edu.tw/Student/baseuser/LoginSSO"
+            form.email.name = "Ecom_User_ID";
+            form.password.name = "Ecom_Password";
+            form.submit();
         }
         function absent() {
             form.action = "https://nam.ncue.edu.tw/nidp/idff/sso?id=Form&sid=0&option=credential&sid=0&target=https://apss.ncue.edu.tw/student/stud_index.php"
+            form.email.name = "Ecom_User_ID";
+            form.password.name = "Ecom_Password";
+            form.submit();
         }
         function activity() {
             form.action = "https://nam.ncue.edu.tw/nidp/idff/sso?id=Form&sid=1&option=credential&sid=1&target=https://apss.ncue.edu.tw/sign_up/login0.php"
+            form.email.name = "Ecom_User_ID";
+            form.password.name = "Ecom_Password";
+            form.submit();
         }
         function conference() {
             form.action = "https://nam.ncue.edu.tw/nidp/idff/sso?id=Form&sid=2&option=credential&sid=2&target=https://apss.ncue.edu.tw/afair/index.php"
+            form.email.name = "Ecom_User_ID";
+            form.password.name = "Ecom_Password";
+            form.submit();
         }
         function court() {
             form.action = "https://nam.ncue.edu.tw/nidp/idff/sso?id=Form&sid=1&option=credential&sid=1&target=https://apss.ncue.edu.tw/court/index.php"
+            form.email.name = "Ecom_User_ID";
+            form.password.name = "Ecom_Password";
+            form.submit();
         }
         function sendtoPassTix() {
             form.action = "https://aps.ncue.edu.tw/app/input1_ok.php"
