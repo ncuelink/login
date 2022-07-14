@@ -52,13 +52,13 @@
                 <!--<h2>快速登入<br><font size="5"><small><i>～行動彰師的替代方案～</i></small></font></h2>-->
                 <div class="form-input pt-30">
                     <p>                        
-                        <input type="submit" name="submit" value="三星 Samsung" onclick="samsung()">
+                        <input type="submit" name="submit" value="三星 Samsung" onclick="samsung2()">
                     <p>
                         <input type="submit" name="submit" value="其他 Android" onclick="other()">
                     <p>         
                 </div>
                 <!-- Forget Password -->
-                <a href="https://www.jotform.com/app/ncuelink/web-app" class="forget" align="center">我的手機沒空間了</a>
+                <a href="https://www.jotform.com/app/ncuelink/web-app" onclick="webapp()" class="forget" align="center">我的手機沒空間了</a>
             </div>
     </form>
     <!-- /end login form -->
@@ -68,25 +68,21 @@
     <script type="text/javascript">
         form = document.getElementById("formallinone");
 
-        function android() {
-            form.action = "android.html"
-            form.submit();
-        }
-        function ios() {
-            form.action = "https://www.jotform.com/app/221792703306453"
-            form.submit();
-        }
-        function pc() {
-            form.action = "https://ncuelink.ncue.org/"
-            form.submit();
-        }
         function samsung() {
             form.action = "https://galaxy.store/ncuelink"
             form.submit();
         }
+        function samsung2() {
+            form.action = "https://galaxystore.samsung.com/detail/developer.angus.ncuelink"
+            form.submit();
+        }
         function other() {
+            window.alert("待會請下載apk檔並安裝 ~(￣▽￣)~*");
             form.action = "https://drive.google.com/drive/folders/1zj1ZNpqrZwMIfV0oo9jjEZK5uopYYIJo?usp=sharing"
             form.submit();
+        }
+        function webapp() {
+            window.alert("改用 Web App 不佔空間呦 ( •̀ ω •́ )y");
         }
     </script>
 
