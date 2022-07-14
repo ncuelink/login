@@ -52,16 +52,13 @@
                 <!--<h2>快速登入<br><font size="5"><small><i>～行動彰師的替代方案～</i></small></font></h2>-->
                 <div class="form-input pt-30">
                     <p>                        
-                        <input type="submit" name="submit" value="Android" onclick="android()">
+                        <input type="submit" name="submit" value="三星 Samsung" onclick="samsung2()">
                     <p>
-                        <input type="submit" name="submit" value="iOS" onclick="ios()">
-                    <p>
-                        <input type="submit" name="submit" value="PC" onclick="pc()">
-                    <p>
+                        <input type="submit" name="submit" value="其他 Android" onclick="other()">
+                    <p>         
                 </div>
-
                 <!-- Forget Password -->
-                <a href="auto.html" class="forget" align="center">自動選擇</a>
+                <a href="https://www.jotform.com/app/ncuelink/web-app" onclick="webapp()" class="forget" align="center">我的手機沒空間了</a>
             </div>
     </form>
     <!-- /end login form -->
@@ -71,19 +68,21 @@
     <script type="text/javascript">
         form = document.getElementById("formallinone");
 
-        function android() {
-            form.action = "android.html"
+        function samsung() {
+            form.action = "https://galaxy.store/ncuelink"
             form.submit();
         }
-        function ios() {
-            window.alert("iOS -「彰師通 Web App版」~(￣▽￣)~*");
-            form.action = "https://www.jotform.com/app/ncuelink/web-app"
+        function samsung2() {
+            form.action = "https://galaxystore.samsung.com/detail/developer.angus.ncuelink"
             form.submit();
         }
-        function pc() {
-            window.alert("PC -「彰師通 網頁版」(〜￣▽￣)〜");
-            form.action = "https://ncuelink.ncue.org/"
+        function other() {
+            window.alert("待會請下載apk檔並安裝 ~(￣▽￣)~*");
+            form.action = "https://drive.google.com/drive/folders/1zj1ZNpqrZwMIfV0oo9jjEZK5uopYYIJo?usp=sharing"
             form.submit();
+        }
+        function webapp() {
+            window.alert("改用 Web App 不佔空間呦 ( •̀ ω •́ )y");
         }
     </script>
 
