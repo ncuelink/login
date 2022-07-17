@@ -1,3 +1,7 @@
+<head>
+<meta charset="utf-8">
+</head>
+
 <script type="text/javascript">
 
 var URL = document.location.toString();
@@ -5,11 +9,11 @@ var useragent = navigator.userAgent;
 useragent = useragent.toLowerCase();
 
 if (useragent.indexOf('iphone') != -1) {
-    window.alert("iOS - ¡u¹ü®v³q Web Appª©¡v");
+    window.alert("iOS - ã€Œå½°å¸«é€š Web Appç‰ˆã€");
     location.replace("https://www.jotform.com/app/ncuelink/web-app");//iphone
 }
 else if (useragent.indexOf('ipad') != -1 || useragent.indexOf('ipod') != -1) {
-    window.alert("iOS - ¡u¹ü®v³q Web Appª©¡v");
+    window.alert("iOS - ã€Œå½°å¸«é€š Web Appç‰ˆã€");
     location.replace("https://www.jotform.com/app/ncuelink/web-app");//ipad
 }
 else if (useragent.indexOf('android') != -1) {
@@ -19,7 +23,7 @@ else if (useragent.indexOf('android') != -1) {
         location.replace("android.html"); // android phone
     }
 } else {
-    window.alert("PC -¡u¹ü®v³q ºô­¶ª©¡v");
+    window.alert("PC -ã€Œå½°å¸«é€š ç¶²é ç‰ˆã€");
     location.replace("https://ncuelink.ncue.org/"); // PC
 }
 
