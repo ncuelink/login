@@ -41,7 +41,7 @@
 
     <main class="login-body" data-vide-bg="../assets/img/background.jpg">
         <!-- Login Admin -->
-        <form class="form-default" id="formallinone" action="" >
+        <form class="form-default" id="formallinone" action="" onsubmit="return false;">
 
             <div class="login-form">
                 <!-- logo-login -->
@@ -49,48 +49,32 @@
                     <a href="https://ncuelink.ncue.org"><img src="../assets/img/icon.png" alt=""></a>
                 </div>
                 <!--<h2>您的使用裝置？</h2>-->
-                <h2>已有新版本可更新<br><font size="5"><small><i>請選擇您的裝置</i></small></font></h2>
+                <h2>有新版本可更新<br><font size="5"><small><i>彰師通 APP</i></small></font></h2>
                 <div class="form-input pt-30">
                     <p>
-                        <input type="submit" name="submit" value="三星 Samsung" onclick="window.open('https://galaxystore.samsung.com/detail/developer.angus.ncuelink', '_blank')">
-                    <p>
-                        <input type="submit" name="submit" value="其他 Android" onclick="window.open('https://drive.google.com/drive/folders/1zj1ZNpqrZwMIfV0oo9jjEZK5uopYYIJo?usp=sharing', '_blank')">
+                        <input type="submit" name="submit" value="更新" onclick="checkdevice()">
                     <p>
                 </div>
                 <!-- Forget Password -->
-                <a href="https://tinyl.io/news" target="_self" class="forget" align="center">取消</a>
+                <a href="https://ncuelink.github.io/app/news2.html" target="_self" class="forget" align="center">取消</a>
             </div>
-    </form>
-    <!-- /end login form -->
-</main>
+        </form>
+        <!-- /end login form -->
+    </main>
     <!--<p align="center"><b>彰師通 NcueLink</b></p>-->
     <!--<a href="https://ncuelink.ncue.org" align="center" class="forget"><b>彰師通 NcueLink</b></a>-->
-    <script type="text/javascript">
-        form = document.getElementById("formallinone");
 
-        function android() {
-            form.action = "android.html"
-            form.submit();
-        }
-        function ios() {
-            form.action = "https://www.jotform.com/app/221792703306453"
-            form.submit();
-        }
-        function pc() {
-            form.action = "https://ncuelink.ncue.org/"
-            form.submit();
-        }
-        function samsung() {
-            form.action = "https://galaxy.store/ncuelink"
-            form.submit();
-        }
-        function samsung2() {
-            form.action = "https://galaxystore.samsung.com/detail/developer.angus.ncuelink"
-            form.submit();
-        }
-        function other() {
-            form.action = "https://drive.google.com/drive/folders/1zj1ZNpqrZwMIfV0oo9jjEZK5uopYYIJo?usp=sharing"
-            form.submit();
+    <script type="text/javascript">
+        function checkdevice(){
+            var parser = new UAParser();
+            var result = parser.getResult();
+            var platform = result.device.vendor;
+            if (platform == "Samsung") {
+                window.open('https://galaxystore.samsung.com/detail/developer.angus.ncuelink', '_blank')
+            }
+            else {
+                window.open('https://apkpure.com/tw/p/developer.angus.ncuelink', '_blank')
+            }
         }
     </script>
 
@@ -134,5 +118,7 @@
     <script src="../assets/js/plugins.js"></script>
     <script src="../assets/js/main.js"></script>
 
+    <!--https://github.com/faisalman/ua-parser-js-->
+    <script src="../assets/js/ua-parser.min.js"></script>
 </body>
 </html>

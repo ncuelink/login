@@ -41,7 +41,7 @@
 
     <main class="login-body" data-vide-bg="../assets/img/background.jpg">
         <!-- Login Admin -->
-        <form class="form-default" id="formallinone" action="" >
+        <form class="form-default" id="formallinone" action="" onsubmit="return false;">
 
             <div class="login-form">
                 <!-- logo-login -->
@@ -51,7 +51,7 @@
                 <h2>您的使用裝置？</h2>
                 <!--<h2>快速登入<br><font size="5"><small><i>～行動彰師的替代方案～</i></small></font></h2>-->
                 <div class="form-input pt-30">
-                    <p>                        
+                    <p>
                         <input type="submit" name="submit" value="Android" onclick="android()">
                     <p>
                         <input type="submit" name="submit" value="iOS" onclick="ios()">
@@ -63,27 +63,24 @@
                 <!-- Forget Password -->
                 <a href="#" class="forget" align="center" onclick="auto()">AUTO</a>
             </div>
-    </form>
-    <!-- /end login form -->
-</main>
+        </form>
+        <!-- /end login form -->
+    </main>
     <!--<p align="center"><b>彰師通 NcueLink</b></p>-->
     <!--<a href="https://ncuelink.ncue.org" align="center" class="forget"><b>彰師通 NcueLink</b></a>-->
     <script type="text/javascript">
         form = document.getElementById("formallinone");
 
         function android() {
-            form.action = "android.html"
-            form.submit();
+            location.replace("android.html");
         }
         function ios() {
             window.alert("iOS -「彰師通 Web App版」~(￣▽￣)~*");
-            form.action = "https://www.jotform.com/app/ncuelink/web-app"
-            form.submit();
+            window.open('https://www.jotform.com/app/ncuelink/web-app','_blank');
         }
         function pc() {
             window.alert("PC -「彰師通 網頁版」(〜￣▽￣)〜");
-            form.action = "https://ncuelink.ncue.org/"
-            form.submit();
+            window.open('https://ncuelink.ncue.org/', '_blank');
         }
         function auto() {
             var URL = document.location.toString();
@@ -92,27 +89,40 @@
 
             if (useragent.indexOf('iphone') != -1) {
                 window.alert("iOS - 「彰師通 Web App版」");
-                location.replace("https://www.jotform.com/app/ncuelink/web-app");//iphone
+                window.open('https://www.jotform.com/app/ncuelink/web-app','_blank');//iphone
             }
             else if (useragent.indexOf('ipad') != -1 || useragent.indexOf('ipod') != -1) {
                 window.alert("iOS - 「彰師通 Web App版」");
-                location.replace("https://www.jotform.com/app/ncuelink/web-app");//ipad
+                window.open('https://www.jotform.com/app/ncuelink/web-app','_blank');//ipad
             }
             else if (useragent.indexOf('android') != -1) {
                 if (ConsiderLimits()) {
-                    location.replace("android.html"); // android pad
+                    checkdevice(); // android pad
                 } else {
-                    location.replace("android.html"); // android phone
+                    checkdevice(); // android phone
                 }
             } else {
                 window.alert("PC -「彰師通 網頁版」");
-                location.replace("https://ncuelink.ncue.org/"); // PC
+                window.open('https://ncuelink.ncue.org/"', '_blank'); // PC
             }
 
             function ConsiderLimits() {
                 if (screen.width >= 1024 && screen.height >= 600)
                     return 1;
                 return 0;
+            }
+        }
+        function checkdevice() {
+            var parser = new UAParser();
+            var result = parser.getResult();
+            var platform = result.device.vendor;
+            if (platform == "Samsung") {
+                window.alert("Samsung -「彰師通 APP」");
+                window.open('https://galaxystore.samsung.com/detail/developer.angus.ncuelink','_blank');
+            }
+            else {
+                window.alert("Android -「彰師通 APP」");
+                window.open('https://apkpure.com/tw/p/developer.angus.ncuelink', '_blank');
             }
         }
     </script>
@@ -157,5 +167,7 @@
     <script src="../assets/js/plugins.js"></script>
     <script src="../assets/js/main.js"></script>
 
+    <!--https://github.com/faisalman/ua-parser-js-->
+    <script src="../assets/js/ua-parser.min.js"></script>
 </body>
 </html>

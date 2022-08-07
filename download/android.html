@@ -41,7 +41,7 @@
 
     <main class="login-body" data-vide-bg="../assets/img/background.jpg">
         <!-- Login Admin -->
-        <form class="form-default" id="formallinone" action="" >
+        <form class="form-default" id="formallinone" action="" onsubmit="return false;">
 
             <div class="login-form">
                 <!-- logo-login -->
@@ -69,17 +69,14 @@
         form = document.getElementById("formallinone");
 
         function samsung() {
-            form.action = "https://galaxy.store/ncuelink"
-            form.submit();
+            window.open('https://galaxy.store/ncuelink', '_blank');
         }
         function samsung2() {
-            form.action = "https://galaxystore.samsung.com/detail/developer.angus.ncuelink"
-            form.submit();
+            window.open('https://galaxystore.samsung.com/detail/developer.angus.ncuelink','_blank');
         }
         function other() {
-            window.alert("待會請下載apk檔並安裝 ~(￣▽￣)~*");
-            form.action = "https://drive.google.com/drive/folders/1zj1ZNpqrZwMIfV0oo9jjEZK5uopYYIJo?usp=sharing"
-            form.submit();
+            //window.alert("待會請下載apk檔並安裝 ~(￣▽￣)~*");
+            window.open('https://apkpure.com/tw/p/developer.angus.ncuelink', '_blank');
         }
         function webapp() {
             window.alert("改用 Web App 不佔空間呦 ( •̀ ω •́ )y");
