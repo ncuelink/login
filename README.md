@@ -11,14 +11,14 @@
 > 選擇使用 APP、Web App、網頁版
 #### [index](https://portal.ncuelink.ncue.org/start/)
 * 選擇使用的裝置 (Android, iOS, PC)
-#### android
+#### [android](https://portal.ncuelink.ncue.org/start/android)
 * index 若選擇 Andoid 則轉跳此畫面
 * 選擇 Samsung 或 其他 Android
-#### android-update
+#### [android-update](https://portal.ncuelink.ncue.org/start/android-update)
 * 提醒更新APP (Android)
 * 有新版本時，會放在 APP 首頁
 * [由此更新短網址](https://app.lihi.io/admin "lihi短網址") 
-#### auto
+#### [auto](https://portal.ncuelink.ncue.org/start/auto)
 * 自動偵測裝置
 <br><br>
 
