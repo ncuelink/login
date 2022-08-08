@@ -12,7 +12,7 @@
 <br><br>
 
 ## 新功能
-### start [🔗](https://github.com/ncuelink/portal/tree/gh-pages/start)
+### start [🪄](https://github.com/ncuelink/portal/tree/gh-pages/start)
 > 選擇使用 APP、Web App、網頁版
 #### [index](https://portal.ncuelink.ncue.org/start/)
 * 選擇使用的裝置 (Android, iOS, PC)
