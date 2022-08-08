@@ -7,7 +7,7 @@
 <br><br>
 
 ## 新功能
-### start
+### start [🔗](https://portal.ncuelink.ncue.org/start/)
 > 選擇使用 APP、Web App、網頁版
 #### [index](https://portal.ncuelink.ncue.org/start/)
 * 選擇使用的裝置 (Android, iOS, PC)
