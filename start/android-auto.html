@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>下載APP(auto)｜彰師通 NcueLink</title>
+    <script src="../assets/js/ua-parser.min.js"></script>
+</head>
+
+<body>
+<script type="text/javascript">
+
+    var parser = new UAParser();
+    var result = parser.getResult();
+    var platform = result.device.vendor;
+    if (platform == "Samsung") {
+        location.replace("https://galaxystore.samsung.com/detail/developer.angus.ncuelink"); //Galaxy Store
+    }
+    else {
+        location.replace("https://apkpure.com/tw/p/developer.angus.ncuelink"); //ApkPure
+    }
+
+</script>
+</body>
+</html>
