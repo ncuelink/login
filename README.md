@@ -23,7 +23,7 @@
 * 提醒更新APP (Android)
 * 有新版本時，會放在 APP 首頁
 * [更新短網址](https://app.lihi.io/admin "lihi短網址") 
-#### [android-auto](#) `待開發`
+#### [android-auto](https://portal.ncuelink.ncue.org/start/android-auto)
 * 針對 Android 自動偵測裝置
 * 若為三星則轉跳至 Galaxy Store，其餘裝置轉跳至 ApkPure
 #### [auto](https://portal.ncuelink.ncue.org/start/auto)
