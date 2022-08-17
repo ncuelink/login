@@ -4,26 +4,28 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Android App｜彰師通 NcueLink</title>
-    <meta name="description" content="">
+    <meta name="description" content="彰師通 NcueLink 為彰師大學生自行開發，整合學校各個分立的網站，提升學生使用的便利性。">
+    <meta property="og:description" content="幫您找到最適合您的彰師通版本！">
+    <meta property="og:image" content="https://portal.ncuelink.ncue.org/assets/img/image.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.ico">
 
-	<!-- CSS here -->
-	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="../assets/css/slicknav.css">
+    <!-- CSS here -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/slicknav.css">
     <link rel="stylesheet" href="../assets/css/flaticon.css">
     <link rel="stylesheet" href="../assets/css/progressbar_barfiller.css">
     <link rel="stylesheet" href="../assets/css/gijgo.css">
     <link rel="stylesheet" href="../assets/css/animate.min.css">
     <link rel="stylesheet" href="../assets/css/animated-headline.css">
-	<link rel="stylesheet" href="../assets/css/magnific-popup.css">
-	<link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
-	<link rel="stylesheet" href="../assets/css/themify-icons.css">
-	<link rel="stylesheet" href="../assets/css/slick.css">
-	<link rel="stylesheet" href="../assets/css/nice-select.css">
-	<link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../assets/css/themify-icons.css">
+    <link rel="stylesheet" href="../assets/css/slick.css">
+    <link rel="stylesheet" href="../assets/css/nice-select.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
     <!-- ? Preloader Start -->
@@ -49,7 +51,6 @@
                     <a href="https://ncuelink.ncue.org"><img src="../assets/img/icon.png" alt=""></a>
                 </div>
                 <h2>您的使用裝置？</h2>
-                <!--<h2>快速登入<br><font size="5"><small><i>～行動彰師的替代方案～</i></small></font></h2>-->
                 <div class="form-input pt-30">
                     <p>                        
                         <input type="submit" name="submit" value="三星 Samsung" onclick="samsung2()">
@@ -63,24 +64,22 @@
     </form>
     <!-- /end login form -->
 </main>
-    <!--<p align="center"><b>彰師通 NcueLink</b></p>-->
-    <!--<a href="https://ncuelink.ncue.org" align="center" class="forget"><b>彰師通 NcueLink</b></a>-->
+
     <script type="text/javascript">
         form = document.getElementById("formallinone");
 
-        /*function samsung() {
-            window.open('https://galaxy.store/ncuelink', '_blank');
-        }*/
+        function samsung() {
+            location.href = 'https://galaxy.store/ncuelink';
+            //window.open('https://galaxy.store/ncuelink', '_blank');
+        }
         function samsung2() {
-            //window.open('https://galaxystore.samsung.com/detail/developer.angus.ncuelink','_blank');
-            window.alert("Galaxy Store 請下載彰師通APP");
             location.href = 'https://galaxystore.samsung.com/detail/developer.angus.ncuelink';
+            //window.alert("Galaxy Store 請下載彰師通APP");
         }
         function other() {
-            window.alert("ApkPure 請下載並安裝彰師通APP");
             location.href = 'https://apkpure.com/tw/p/developer.angus.ncuelink';
             //window.alert("待會請下載apk檔並安裝 ~(￣▽￣)~*");
-            //window.open('https://apkpure.com/tw/p/developer.angus.ncuelink', '_blank');
+            //window.alert("ApkPure 請下載並安裝彰師通APP");
         }
         function webapp() {
             window.alert("改用 Web App 不佔空間呦 ( •̀ ω •́ )y");

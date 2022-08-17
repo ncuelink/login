@@ -3,6 +3,9 @@
 <head>
     <meta charset="utf-8">
     <title>下載APP(auto)｜彰師通 NcueLink</title>
+    <meta name="description" content="彰師通 NcueLink 為彰師大學生自行開發，整合學校各個分立的網站，提升學生使用的便利性。">
+    <meta property="og:description" content="幫您找到最適合您的彰師通版本！">
+    <meta property="og:image" content="https://portal.ncuelink.ncue.org/assets/img/image.jpg">
     <script src="../assets/js/ua-parser.min.js"></script>
 </head>
 
@@ -13,7 +16,8 @@
     var result = parser.getResult();
     var platform = result.device.vendor;
     if (platform == "Samsung") {
-        location.replace("https://galaxystore.samsung.com/detail/developer.angus.ncuelink"); //Galaxy Store
+        //location.replace("https://galaxystore.samsung.com/detail/developer.angus.ncuelink"); //Galaxy Store
+        location.replace("https://galaxy.store/ncuelink");
     }
     else {
         location.replace("https://apkpure.com/tw/p/developer.angus.ncuelink"); //ApkPure

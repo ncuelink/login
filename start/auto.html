@@ -3,6 +3,9 @@
 <head>
     <meta charset="utf-8">
     <title>開始使用(auto)｜彰師通 NcueLink</title>
+    <meta name="description" content="彰師通 NcueLink 為彰師大學生自行開發，整合學校各個分立的網站，提升學生使用的便利性。">
+    <meta property="og:description" content="歡迎使用彰師通，幫您自動選擇最適合您的彰師通版本！">
+    <meta property="og:image" content="https://portal.ncuelink.ncue.org/assets/img/image.jpg">
     <script src="../assets/js/ua-parser.min.js"></script>
 </head>
 
@@ -44,7 +47,7 @@ function checkdevice() {
     var platform = result.device.vendor;
     if (platform == "Samsung") {
         window.alert("Samsung -「彰師通 APP」");
-        location.replace("https://galaxy.store/ncuelink");
+        location.replace("https://galaxystore.samsung.com/detail/developer.angus.ncuelink");
     }
     else {
         window.alert("Android -「彰師通 APP」");
