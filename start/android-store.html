@@ -2,9 +2,9 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>前往APP｜彰師通 NcueLink</title>
+    <title>前往APP商店｜彰師通 NcueLink</title>
     <meta name="description" content="彰師通 NcueLink 為彰師大學生自行開發，整合學校各個分立的網站，提升學生使用的便利性。">
-    <meta property="og:description" content="立即前往下載/使用彰師通APP！">
+    <meta property="og:description" content="立即前往下載/更新彰師通APP！">
     <meta property="og:image" content="https://portal.ncuelink.ncue.org/assets/img/image.jpg">
     <script src="../assets/js/ua-parser.min.js"></script>
 </head>
@@ -16,11 +16,13 @@
     var result = parser.getResult();
     var platform = result.device.vendor;
     if (platform == "Samsung") {
-        //location.replace("https://galaxystore.samsung.com/detail/developer.angus.ncuelink"); //Galaxy Store
-        location.replace("https://galaxy.store/ncuelink");
+        location.replace("https://galaxystore.samsung.com/detail/developer.angus.ncuelink"); //Galaxy Store
+        //location.replace("https://galaxy.store/ncuelink");
+        //window.open('https://galaxystore.samsung.com/detail/developer.angus.ncuelink', '_blank');
     }
     else {
         location.replace("https://apkpure.com/tw/p/developer.angus.ncuelink"); //ApkPure
+        //window.open('https://apkpure.com/tw/p/developer.angus.ncuelink', '_blank');
     }
 
 </script>
