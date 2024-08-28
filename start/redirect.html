@@ -6,13 +6,13 @@
     <title>Check Device</title>
     <script>
         function redirectBasedOnBrand() {
-            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            var userAgent = navigator.userAgent.toLowerCase();
 
             // 檢查是否為 Samsung 裝置
-            if (/Samsung|SM-/i.test(userAgent)) {
-                window.location.href = "https://galaxystore.samsung.com/detail/developer.angus.ncuelink"; // A網站的URL
+            if (userAgent.includes('samsung') || userAgent.includes('sm-')) {
+                window.location.href = "https://www.galaxystore.com"; // A網站的URL
             } else {
-                window.location.href = "https://apkpure.com/tw/p/developer.angus.ncuelink"; // B網站的URL
+                window.location.href = "https://www.example.com"; // B網站的URL
             }
         }
 
